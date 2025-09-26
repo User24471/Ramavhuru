@@ -1,0 +1,228 @@
+/* Import Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f8f9fa; /* light neutral */
+  color: #333;
+}
+
+/* Header */
+header {
+  background: #2c3e50; /* deep charcoal */
+  color: white;
+  text-align: center;
+  padding: 1.5rem 1rem;
+}
+
+header .logo {
+  max-width: 180px;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+/* Navigation */
+nav {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+nav a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 5px;
+  background: #e67e22; /* warm orange */
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+nav a:hover,
+nav a.active {
+  background: #d35400; /* darker orange */
+  transform: scale(1.05);
+}
+
+/* Main */
+main {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+h1 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.main-image {
+  margin: 1.5rem 0;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* Footer */
+footer {
+  background: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+
+.social-footer {
+  margin-top: 0.5rem;
+}
+
+.social-footer a {
+  color: #e67e22;
+  margin: 0 10px;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.social-footer a:hover {
+  color: #16a085; /* teal highlight */
+}
+
+/* Products */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.product-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card img {
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+.product-card h2 {
+  font-size: 1.2rem;
+  color: #e67e22;
+}
+
+/* Services */
+.service {
+  margin: 2rem 0;
+  padding: 1rem;
+  text-align: center;
+}
+
+.service img {
+  margin: 1rem 0;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+@media (min-width: 768px) {
+  .service {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-align: left;
+  }
+  .service img {
+    max-width: 300px;
+    flex-shrink: 0;
+  }
+  .service p {
+    flex: 1;
+  }
+}
+
+/* Contact Form */
+form {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 2px solid #e67e22;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+form label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+form button {
+  background-color: #e67e22;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+form button:hover {
+  background-color: #d35400;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+  header .logo {
+    max-width: 150px;
+  }
+  main {
+    padding: 1rem;
+  }
+}
