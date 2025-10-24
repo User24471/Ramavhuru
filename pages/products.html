@@ -16,41 +16,65 @@
         <nav>
             <a href="../index.html">Home</a>
             <a href="./About.html">About Us</a>
-            <a href="./products.html">Products</a>
+            <a href="./products.html" class="active"></a>Products</a>
             <a href="./services.html">Services</a>
             <a href="./contact.html">Contact</a>
+            <a href="./order.html">order</a>
         </nav>
    </header>
 
-   <main>
-       <h1>Our Products</h1>
-       <p>
-         At <strong>Mr Ramavhuru Pillars & Logistics</strong>, we are proud to supply durable and high-quality products designed to meet your needs. 
-         Whether you are building, fencing, or beautifying your space, our products are built to last.
-       </p>
+<!-- Dark Mode Button -->
+    <button id="darkModeToggle" class="dark-toggle">
+      <i class="fas fa-moon"></i>
+    </button>
+  </header>
 
-       <section>
-           <h2>Concrete Pillars</h2>
-           <img src="../assests/p7.jfif" alt="Concrete Pillars" class="pillar"><br/>
-           <img src="../assests/p3.jfif" alt="Concrete pillar" class="pillar"><br/>
-            <img src="../assests/2TR.jpg" alt="Concrete Shot pillars" class="pillar"><br/>
-           <p>
-             Our strong and durable <b>concrete pillars</b> are ideal for fencing, building structures, and providing long-term support. 
-             They are crafted with precision to ensure strength and durability.
-           </p>
-       </section>
+  <!-- Main Content -->
+  <main>
+    <section class="intro">
+      <h1>Our Products</h1>
+      <p>
+        At <strong>Mr Ramavhuru Pillars & Logistics</strong>, we are proud to supply 
+        durable and high-quality products designed to meet your needs. Whether you are 
+        building, fencing, or beautifying your space, our products are built to last.
+      </p>
+    </section>
 
-       <section>
-           <h2>Blompotte, Banch (Flower Pots)</h2>
-           <img src="../assests/product1.jfif" alt="Concrete Flower Pots" class="pots"><br/>
-           <img src="../assests/p8.jfif" alt="Concrete Flower Pots" class="pots"><br/>
-            <img src="../assests/p4.jfif" alt="Concrete Banch" class="Banch"><br/>
-           <p>
-             Add beauty and strength to your home or business with our stylish <b>blompotte, Banch</b>. 
-             They come in various sizes and designs, perfect for enhancing your garden or decorative space.
-           </p>
-       </section>
-   </main>
+    <section class="product-grid">
+      <!-- Product Card 1 -->
+      <div class="product-card">
+        <h2>Concrete Pillars</h2>
+        <div class="product-images">
+          <img src="../assests/p7.jfif" alt="Concrete Pillars">
+          <img src="../assests/p3.jfif" alt="Concrete Pillar">
+          <img src="../assests/2TR.jpg" alt="Concrete Short Pillars">
+        </div>
+        <p>
+          Our strong and durable <b>concrete pillars</b> are ideal for fencing, 
+          building structures, and providing long-term support. They are crafted 
+          with precision to ensure strength and durability.
+        </p>
+        <a href="./order.html" class="btn">Order Now</a>
+      </div>
+
+      <!-- Product Card 2 -->
+      <div class="product-card">
+        <h2>Blompotte & Benches</h2>
+        <div class="product-images">
+          <img src="../assests/product1.jfif" alt="Concrete Flower Pots">
+          <img src="../assests/p8.jfif" alt="Concrete Pots">
+          <img src="../assests/p4.jfif" alt="Concrete Bench">
+        </div>
+        <p>
+          Add beauty and strength to your home or business with our stylish 
+          <b>blompotte and benches</b>. Available in various designs and sizes, 
+          they’re perfect for gardens, patios, and business spaces.
+        </p>
+        <a href="./order.html" class="btn">Order Now</a>
+      </div>
+    </section>
+  </main>
+
 
    <footer>
        <p>&copy; 2025 Ramavhuru Pillars & Logistics. All rights reserved.</p>
