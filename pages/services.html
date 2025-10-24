@@ -1,73 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Services - Mr Ramavhuru Pillars & Logistics</title>
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services - Mr Ramavhuru Pillars & Logistics</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
-   <header>
-        <!-- Logo -->
-        <img src="../assests/Logo.jfif" alt="Ramavhuru logo" class="logo" ><br/>
-        <!-- Navigation -->
-       <nav>
-          <a href="../index.html">Home</a>
-          <a href="./About.html">About Us</a>
-          <a href="./products.html">Products</a>
-          <a href="./services.html">Services</a>
-          <a href="./contact.html">Contact</a>
-          <a href="./order.html">order</a>
-        </nav>
-   </header>
+  <!-- Header -->
+  <header>
+    <img src="../assests/Logo.jfif" alt="Ramavhuru logo" class="logo"><br/>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="./About.html">About Us</a>
+      <a href="./products.html">Products</a>
+      <a href="./services.html" class="active">Services</a>
+      <a href="./contact.html">Contact</a>
+      <a href="./order.html">Order</a>
+    </nav>
 
-   <main>
-       <h1>Our Services</h1>
-       <p>
-         At <strong>Mr Ramavhuru Pillars & Logistics</strong>, we don’t just provide products — we also deliver reliable services that make your experience smooth and worry-free.
-       </p>
+    <!-- Dark Mode Button -->
+    <button id="darkModeToggle" class="dark-toggle">
+      <i class="fas fa-moon"></i>
+    </button>
+  </header>
 
-       <section>
-           <h2>Transportation & Logistics</h2>
-           <img src="../assests/2TR.jpg" alt="Logistics " class="main-image">
-           <p>
-             We offer <b>safe and efficient goods transportation</b>, ensuring your materials reach their destination on time and in excellent condition. 
-             Our professional drivers and fleet guarantee reliable deliveries.
-           </p>
-       </section>
+  <!-- Main Content -->
+  <main class="services-main">
+    <h1>Our Services</h1>
+    <p class="intro-text">
+      At <strong>Mr Ramavhuru Pillars & Logistics</strong>, we don’t just provide quality concrete products — 
+      we deliver dependable services that make your experience smooth, fast, and worry-free.
+    </p>
 
-       <section>
-           <h2>Custom Orders</h2>
-           <img src="../assests/p4.jfif" alt="Custom Concrete Work"  class="custom products">
-           <p>
-             Need something unique? We provide <b>custom concrete solutions</b> tailored to your specifications, whether it’s special pillar sizes or unique blompotte designs.
-           </p>
-       </section>
+    <!-- Services Grid -->
+    <section class="services-grid">
+      <!-- Service 1 -->
+      <div class="service-card">
+        <h2>Transportation & Logistics</h2>
+        <img src="../assests/2TR.jpg" alt="Logistics Services" class="service-image">
+        <p>
+          We offer <b>safe and efficient goods transportation</b>, ensuring your materials reach their destination 
+          on time and in excellent condition. Our professional drivers and well-maintained fleet guarantee 
+          dependable and stress-free deliveries.
+        </p>
+        <a href="./order.html" class="btn">Book Transport</a>
+      </div>
 
-       <section>
-           <h2>On-Site Delivery</h2>
-           <img src="../assests/TRA.jpg" alt="On-site Delivery"  class="delivary-image">
-           <p>
-             For your convenience, we deliver directly to your project site or home. 
-             This saves you time and ensures your products arrive safely and ready to use.
-           </p>
-       </section>
-   </main>
+      <!-- Service 2 -->
+      <div class="service-card">
+        <h2>Custom Orders</h2>
+        <img src="../assests/p4.jfif" alt="Custom Concrete Work" class="service-image">
+        <p>
+          Need something unique? We provide <b>custom concrete solutions</b> tailored to your specific needs — 
+          from unique pillar sizes to creative blompotte (flower pot) designs. Let us bring your idea to life!
+        </p>
+        <a href="./order.html" class="btn">Request Custom Order</a>
+      </div>
 
-   <footer>
-       <p>&copy; 2025 Ramavhuru Pillars & Logistics. All rights reserved.</p>
-       <div class="social-footer">
-  <!-- Facebook -->
-  <a href="https://www.facebook.com/Funanani.Ramavhuru" target="_blank">
-    <i class="fab fa-facebook-f"></i>
-  </a>
+      <!-- Service 3 -->
+      <div class="service-card">
+        <h2>On-Site Delivery</h2>
+        <img src="../assests/TRA.jpg" alt="On-site Delivery" class="service-image">
+        <p>
+          We provide <b>on-site delivery</b> straight to your project location or home. 
+          Save time and effort while we ensure your products arrive safely and ready to use — wherever you are.
+        </p>
+        <a href="./order.html" class="btn">Schedule Delivery</a>
+      </div>
+    </section>
+  </main>
 
-  <!-- WhatsApp -->
-  <a href="https://wa.me/27711161134" target="_blank">
-    <i class="fab fa-whatsapp"></i>
-  </a>
-</div>
-   </footer>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Ramavhuru Pillars & Logistics. All rights reserved.</p>
+    <div class="social-footer">
+      <a href="https://www.facebook.com/Funanani.Ramavhuru" target="_blank">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://wa.me/27711161134" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </div>
+  </footer>
+
+  </script>
 </body>
 </html>
