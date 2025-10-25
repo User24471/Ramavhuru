@@ -1,62 +1,97 @@
-/* Import Font */
+/* ====================================
+   GLOBAL STYLES
+==================================== */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body */
 body {
   font-family: "Poppins", Arial, sans-serif;
   line-height: 1.6;
-  background-color: #f8f9fa; /* light neutral */
-  color: #333;
+  background-color: #f8f8f8;
+  color: #222;
+  transition: background-color 0.4s, color 0.4s;
 }
 
-/* Header */
+/* ====================================
+   HEADER & NAVIGATION
+==================================== */
 header {
-  background: #2c3e50; /* deep charcoal */
+  background-color: #2c3e50;
   color: white;
-  text-align: center;
-  padding: 1.5rem 1rem;
-}
-
-header .logo {
-  max-width: 180px;
-  height: auto;
-  margin-bottom: 0.5rem;
-}
-
-/* Navigation */
-nav {
-  margin-top: 1rem;
+  padding: 1.5rem;
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.logo {
+  width: 100px;
+  border-radius: 50%;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 15px;
 }
 
 nav a {
+  color: white;
   text-decoration: none;
   font-weight: 600;
-  font-size: 1rem;
-  color: white;
+  background: #e67e22;
   padding: 8px 16px;
-  border-radius: 5px;
-  background: #e67e22; /* warm orange */
-  transition: background 0.3s ease, transform 0.2s ease;
+  border-radius: 6px;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
 nav a:hover,
 nav a.active {
-  background: #d35400; /* darker orange */
+  background: #d35400;
   transform: scale(1.05);
 }
 
-/* Main */
+/* HAMBURGER MENU (for small screens) */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    background-color: #2c3e50;
+  }
+
+  nav.active {
+    max-height: 300px;
+    padding: 10px 0;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+/* ====================================
+   MAIN CONTENT
+==================================== */
 main {
   padding: 2rem 1rem;
   text-align: center;
@@ -69,260 +104,75 @@ h1 {
 
 p {
   margin-bottom: 1rem;
-}
-
-/* Images */
-img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-.main-image {
-  margin: 1.5rem 0;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-}
-
-/* Footer */
-footer {
-  background: #2c3e50;
-  color: white;
-  text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
-  font-size: 0.9rem;
-}
-
-.social-footer {
-  margin-top: 0.5rem;
-}
-
-.social-footer a {
-  color: #e67e22;
-  margin: 0 10px;
-  font-size: 1.5rem;
-  transition: color 0.3s ease;
-}
-
-.social-footer a:hover {
-  color: #16a085; /* teal highlight */
-}
-
-/* Products */
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  margin: 2rem 0;
-}
-
-.product-card {
-  background: #fff;
-  border-radius: 8px;
-  padding: 1rem;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  text-align: center;
-  transition: transform 0.2s ease;
-}
-
-.product-card:hover {
-  transform: translateY(-5px);
-}
-
-.product-card img {
-  height: 200px;
-  object-fit: cover;
-  border-radius: 6px;
-  margin-bottom: 1rem;
-}
-
-.product-card h2 {
-  font-size: 1.2rem;
-  color: #e67e22;
-}
-
-/* Services */
-.service {
-  margin: 2rem 0;
-  padding: 1rem;
-  text-align: center;
-}
-
-.service img {
-  margin: 1rem 0;
-  border-radius: 8px;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-}
-
-@media (min-width: 768px) {
-  .service {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    text-align: left;
-  }
-  .service img {
-    max-width: 300px;
-    flex-shrink: 0;
-  }
-  .service p {
-    flex: 1;
-  }
-}
-
-/* Contact Form */
-form {
-  max-width: 500px;
-  margin: 20px auto;
-  padding: 20px;
-  border: 2px solid #e67e22;
-  border-radius: 8px;
-  background-color: #ffffff;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-}
-
-form label {
-  font-weight: bold;
-  display: block;
-  margin-bottom: 5px;
-  text-align: left;
-}
-
-form input,
-form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 1rem;
-}
-
-form button {
-  background-color: #e67e22;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: background 0.3s;
-}
-
-form button:hover {
-  background-color: #d35400;
-}
-
-/* Responsive */
-@media (max-width: 600px) {
-  nav {
-    flex-direction: column;
-    gap: 10px;
-  }
-  header .logo {
-    max-width: 150px;
-  }
-  main {
-    padding: 1rem;
-  }
-}
-
-/* Product Page Layout */
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  margin: 20px;
-}
-
-.product-card {
-  background: #fff;
-  padding: 20px;
-  border-radius: 16px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  text-align: center;
-}
-
-.product-card img {
-  width: 100%;
-  border-radius: 12px;
-  margin-bottom: 10px;
-}
-
-.btn {
-  display: inline-block;
-  padding: 10px 20px;
-  margin-top: 10px;
-  background-color: #4CAF50;
-  color: white;
-  border-radius: 8px;
-  text-decoration: none;
-}
-
-.btn:hover {
-  background-color: #388E3C;
-}
-
-/* Dark Mode */
-.dark-mode {
-  background-color: #121212;
-  color: #f5f5f5;
-}
-
-.dark-mode .product-card {
-  background: #1e1e1e;
-  color: #f5f5f5;
-  box-shadow: 0 4px 10px rgba(255,255,255,0.1);
-}
-
-.dark-toggle {
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  font-size: 1.3rem;
-  color: #333;
-}
-
-.dark-mode .dark-toggle {
-  color: #f5f5f5;
-}
-
-/* ---------- HOME MAIN SECTION ---------- */
-.home-main {
-  text-align: center;
-  padding: 40px 20px;
-  line-height: 1.7;
-}
-
-.home-main h1 {
-  font-size: 2rem;
-  color: #333;
-  margin-bottom: 15px;
-}
-
-.home-main p {
-  max-width: 800px;
-  margin: 0 auto 20px;
   color: #555;
 }
 
 .main-image {
   width: 90%;
   max-width: 700px;
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  border-radius: 12px;
   margin: 20px auto;
   display: block;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
-/* Buttons */
-.home-buttons {
-  margin-top: 25px;
+/* ====================================
+   PRODUCT CARDS
+==================================== */
+.product-section {
+  padding: 40px 20px;
 }
 
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+/* Slide-in animation when visible */
+.card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  color: #e67e22;
+  margin-bottom: 8px;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* ====================================
+   BUTTONS
+==================================== */
 .btn {
   display: inline-block;
   padding: 10px 20px;
@@ -346,304 +196,153 @@ form button:hover {
   background-color: #0056b3;
 }
 
-/* ---------- DARK MODE ---------- */
-.dark-mode .home-main h1,
-.dark-mode .home-main p {
-  color: #f5f5f5;
-}
-
-.dark-mode .btn {
-  color: #f5f5f5;
-}
-
-.dark-mode .main-image {
-  box-shadow: 0 4px 12px rgba(255,255,255,0.1);
-}
-
-/* ---------- SERVICES PAGE ---------- */
-.services-main {
-  text-align: center;
-  padding: 40px 20px;
-}
-
-.services-main h1 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
-
-.intro-text {
-  max-width: 800px;
-  margin: 0 auto 30px;
-  line-height: 1.6;
-  color: #555;
-}
-
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 25px;
+/* ====================================
+   CONTACT FORM
+==================================== */
+form {
+  max-width: 500px;
+  margin: 20px auto;
   padding: 20px;
-}
-
-.service-card {
-  background: #fff;
-  padding: 20px;
-  border-radius: 16px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  text-align: center;
-}
-
-.service-card h2 {
-  color: #333;
-  margin-bottom: 10px;
-}
-
-.service-card img {
-  width: 100%;
-  border-radius: 12px;
-  margin-bottom: 15px;
-}
-
-.service-card p {
-  color: #555;
-  line-height: 1.6;
-  margin-bottom: 15px;
-}
-
-/* Buttons */
-.btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #4CAF50;
-  color: white;
+  border: 2px solid #e67e22;
   border-radius: 8px;
-  text-decoration: none;
-  transition: 0.3s;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
 }
 
-.btn:hover {
-  background-color: #388E3C;
+form label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 6px;
+  text-align: left;
 }
 
-/* ---------- DARK MODE ---------- */
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+form button {
+  background-color: #e67e22;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+form button:hover {
+  background-color: #d35400;
+}
+
+/* ====================================
+   FOOTER
+==================================== */
+footer {
+  background: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+.social-footer {
+  margin-top: 0.5rem;
+}
+
+.social-footer a {
+  color: #e67e22;
+  margin: 0 10px;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+.social-footer a:hover {
+  color: #16a085;
+}
+
+/* ====================================
+   DARK MODE
+==================================== */
 .dark-mode {
   background-color: #121212;
   color: #f5f5f5;
 }
 
-.dark-mode .service-card {
+.dark-mode header,
+.dark-mode footer {
+  background-color: #1e1e1e;
+}
+
+.dark-mode .card {
   background: #1e1e1e;
+  color: #f5f5f5;
   box-shadow: 0 4px 10px rgba(255,255,255,0.1);
 }
 
-.dark-mode .btn {
-  color: #f5f5f5;
-}
-
-.dark-mode .service-card h2,
-.dark-mode .service-card p {
-  color: #f5f5f5;
-}
-/* ========================
-   Global Styles
-======================== */
-body {
-  font-family: "Poppins", Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
-  background-color: #f8f8f8;
-  color: #222;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-h1, h2 {
-  color: #222;
-}
-
-img {
-  max-width: 100%;
-  border-radius: 10px;
-}
-
-/* ========================
-   Header & Navigation
-======================== */
-header {
-  background-color: #2b2b2b;
-  color: white;
-  padding: 10px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  position: relative;
-}
-
-.logo {
-  width: 100px;
-  border-radius: 50%;
-}
-
-/* Navbar */
-.navbar {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.navbar a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s;
-}
-
-.navbar a:hover,
-.navbar a.active {
-  color: #ffce00;
-}
-
-/* ========================
-   Fixed Dark Mode Button
-======================== */
-.dark-mode-btn {
+/* Dark Mode Button */
+.dark-toggle {
   position: fixed;
-  top: 15px;
+  top: 20px;
   right: 20px;
-  background-color: #ffce00;
+  background: #ffce00;
   border: none;
-  color: #2b2b2b;
+  color: #2c3e50;
   font-size: 1.4rem;
   cursor: pointer;
   border-radius: 50%;
   padding: 10px;
   z-index: 1000;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
   transition: background-color 0.3s, transform 0.2s;
 }
 
-.dark-mode-btn:hover {
+.dark-toggle:hover {
   background-color: #ffd633;
   transform: scale(1.1);
 }
 
-/* ========================
-   Hamburger Menu
-======================== */
-.hamburger {
-  display: none;
-  background: none;
-  border: none;
-  color: white;
-  font-size: 1.6rem;
-  cursor: pointer;
+/* ====================================
+   ANIMATED BACKGROUND
+==================================== */
+.animated-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: url('../assests/pillars-bg.png') center/cover no-repeat;
+  animation: bgPulse 15s ease-in-out infinite alternate;
+  opacity: 0.25;
+  filter: blur(2px);
 }
 
-/* ========================
-   Main Content
-======================== */
-main {
-  padding: 20px;
-  text-align: center;
-}
-
-section {
-  margin: 40px 0;
-}
-
-.main-image, .custom-image, .delivery-image {
-  width: 80%;
-  max-width: 600px;
-  margin: 15px 0;
-}
-
-/* ========================
-   Footer
-======================== */
-footer {
-  background-color: #2b2b2b;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  margin-top: 40px;
-}
-
-.social-footer {
-  margin-top: 10px;
-}
-
-.social-footer a {
-  color: white;
-  margin: 0 10px;
-  font-size: 1.2rem;
-  transition: color 0.3s;
-}
-
-.social-footer a:hover {
-  color: #ffce00;
-}
-
-/* ========================
-   Dark Mode Styles
-======================== */
-body.dark-mode {
-  background-color: #121212;
-  color: #e0e0e0;
-}
-
-body.dark-mode header {
-  background-color: #1c1c1c;
-}
-
-body.dark-mode footer {
-  background-color: #1c1c1c;
-}
-
-body.dark-mode a {
-  color: #ffce00;
-}
-
-body.dark-mode .dark-mode-btn {
-  background-color: #444;
-  color: #ffce00;
-}
-
-/* ========================
-   Responsive Design
-======================== */
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    position: absolute;
-    top: 80px;
-    right: 0;
-    background-color: #2b2b2b;
-    width: 100%;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease;
+@keyframes bgPulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.2;
   }
-
-  .navbar.active {
-    max-height: 300px;
+  100% {
+    transform: scale(1.05);
+    opacity: 0.35;
   }
+}
 
-  .hamburger {
-    display: block;
+/* ====================================
+   RESPONSIVE FIXES
+==================================== */
+@media (max-width: 600px) {
+  header .logo {
+    width: 80px;
   }
-
-  .navbar a {
-    padding: 10px;
-    border-top: 1px solid #444;
-    width: 100%;
-    text-align: center;
-  }
-
-  /* Move dark mode button slightly down on mobile */
-  .dark-mode-btn {
-    top: 10px;
-    right: 10px;
-    padding: 8px;
+  main {
+    padding: 1rem;
   }
 }
