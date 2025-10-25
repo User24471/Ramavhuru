@@ -359,3 +359,291 @@ form button:hover {
 .dark-mode .main-image {
   box-shadow: 0 4px 12px rgba(255,255,255,0.1);
 }
+
+/* ---------- SERVICES PAGE ---------- */
+.services-main {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.services-main h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.intro-text {
+  max-width: 800px;
+  margin: 0 auto 30px;
+  line-height: 1.6;
+  color: #555;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  padding: 20px;
+}
+
+.service-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.service-card h2 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.service-card img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.service-card p {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #388E3C;
+}
+
+/* ---------- DARK MODE ---------- */
+.dark-mode {
+  background-color: #121212;
+  color: #f5f5f5;
+}
+
+.dark-mode .service-card {
+  background: #1e1e1e;
+  box-shadow: 0 4px 10px rgba(255,255,255,0.1);
+}
+
+.dark-mode .btn {
+  color: #f5f5f5;
+}
+
+.dark-mode .service-card h2,
+.dark-mode .service-card p {
+  color: #f5f5f5;
+}
+/* ========================
+   Global Styles
+======================== */
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: #f8f8f8;
+  color: #222;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+h1, h2 {
+  color: #222;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+/* ========================
+   Header & Navigation
+======================== */
+header {
+  background-color: #2b2b2b;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.logo {
+  width: 100px;
+  border-radius: 50%;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: #ffce00;
+}
+
+/* ========================
+   Fixed Dark Mode Button
+======================== */
+.dark-mode-btn {
+  position: fixed;
+  top: 15px;
+  right: 20px;
+  background-color: #ffce00;
+  border: none;
+  color: #2b2b2b;
+  font-size: 1.4rem;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 10px;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.dark-mode-btn:hover {
+  background-color: #ffd633;
+  transform: scale(1.1);
+}
+
+/* ========================
+   Hamburger Menu
+======================== */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+/* ========================
+   Main Content
+======================== */
+main {
+  padding: 20px;
+  text-align: center;
+}
+
+section {
+  margin: 40px 0;
+}
+
+.main-image, .custom-image, .delivery-image {
+  width: 80%;
+  max-width: 600px;
+  margin: 15px 0;
+}
+
+/* ========================
+   Footer
+======================== */
+footer {
+  background-color: #2b2b2b;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+.social-footer {
+  margin-top: 10px;
+}
+
+.social-footer a {
+  color: white;
+  margin: 0 10px;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.social-footer a:hover {
+  color: #ffce00;
+}
+
+/* ========================
+   Dark Mode Styles
+======================== */
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode header {
+  background-color: #1c1c1c;
+}
+
+body.dark-mode footer {
+  background-color: #1c1c1c;
+}
+
+body.dark-mode a {
+  color: #ffce00;
+}
+
+body.dark-mode .dark-mode-btn {
+  background-color: #444;
+  color: #ffce00;
+}
+
+/* ========================
+   Responsive Design
+======================== */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    background-color: #2b2b2b;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+
+  .navbar.active {
+    max-height: 300px;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .navbar a {
+    padding: 10px;
+    border-top: 1px solid #444;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Move dark mode button slightly down on mobile */
+  .dark-mode-btn {
+    top: 10px;
+    right: 10px;
+    padding: 8px;
+  }
+}
